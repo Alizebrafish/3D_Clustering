@@ -38,5 +38,8 @@ If users do not have Python installed then ensure Internet Connection to downloa
 
 # GUI will be opened to input number of excel files of 3D data and navigate the output folder to save results 
 
+![Gender_Clusters](https://github.com/Alizebrafish/3D_Clustering/assets/154585602/0b32156a-1ef5-4732-b82d-e66df8230140)
+
+
 
 
