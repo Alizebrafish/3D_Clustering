@@ -12,7 +12,7 @@ Prof. Chung-Der Hsiao
 Department of Bioscience Technology, CYCU, Taiwan.
 Email: cdhsiao@cycu.edu.tw
 
-# 3D_Clsutering Windows Abased Application
+# 3D_Clsutering Windows based Application
 
 ![Shot 0001](https://github.com/Alizebrafish/3D_Clustering/assets/154585602/1fb0d854-b1b6-4ee1-8f5b-801a46a5e7ec)
 
@@ -28,4 +28,6 @@ Unzip the source code mentioned in readmd file
 
 ![Untitled](https://github.com/Alizebrafish/3D_Clustering/assets/154585602/14a1bd03-c2a5-4a8c-aa30-40ed800acb19)
 
+Automatically virtual environment will be created for users having already Python on their local system 
+![Capture](https://github.com/Alizebrafish/3D_Clustering/assets/154585602/811ea105-a6a4-41f8-8583-75675389e995)
 
