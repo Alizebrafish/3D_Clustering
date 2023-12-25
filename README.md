@@ -36,5 +36,7 @@ If users do not have Python installed then ensure Internet Connection to downloa
 
 ![Untitled](https://github.com/Alizebrafish/3D_Clustering/assets/154585602/0b14e3ba-166c-4415-9f91-0d3238b2a9d3)
 
+# GUI will be opened to input number of excel files of 3D data and navigate the output folder to save results 
+
 
 
