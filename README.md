@@ -38,7 +38,15 @@ If users do not have Python installed then ensure Internet Connection to downloa
 
 # GUI will be opened to input number of excel files of 3D data and navigate the output folder to save results 
 
-![Gender_Clusters](https://github.com/Alizebrafish/3D_Clustering/assets/154585602/0b32156a-1ef5-4732-b82d-e66df8230140)
+![Elbow_Gender](https://github.com/Alizebrafish/3D_Clustering/assets/154585602/57061e44-15f1-42f7-9354-9b593ed6764e)
+
+![Gender_Clusters](https://github.com/Alizebrafish/3D_Clustering/assets/154585602/0b32156a-1ef5-4732-b82d-e66df8230140) 
+
+![Silhoutte_Score_Overall_Autoencoder_Gender](https://github.com/Alizebrafish/3D_Clustering/assets/154585602/e4d726e7-39f5-4610-92a8-41da9d0afce8) 
+
+![Dendogram_Silhoutte_Score_Gender_Auto-Encoder](https://github.com/Alizebrafish/3D_Clustering/assets/154585602/ed0462ba-fa67-486a-92c2-90999a3ff749)
+
+
 
 
 
