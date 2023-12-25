@@ -22,3 +22,7 @@ Comprehensive package for 3D clustering analysis of fish tracking/locomotion
 Deep learning unsupervised approach used for analysis
 
 Four clustering methods deployed in single application for statistics
+
+# Installation on Windows operating systems (N/A on Linux)
+Unzip the source code mentioned in readmd file 
+
