@@ -16,4 +16,7 @@ Email: cdhsiao@cycu.edu.tw
 
 ![Shot 0001](https://github.com/Alizebrafish/3D_Clustering/assets/154585602/1fb0d854-b1b6-4ee1-8f5b-801a46a5e7ec)
 
-
+# Features
+Comprehensive package for 3D clustering analysis of fish tracking/locomotion
+Deep learning unsupervised approach used for analysis
+Four clustering methods deployed in single application for statistics
