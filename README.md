@@ -9,5 +9,5 @@ Email: smalifarhan@gmail.com
 # Correspondence 
 
 Prof. Chung-Der Hsiao
-Laboratory of Biotechnology, ChungYuan Christian University, Taoyuan, Taiwan.
+Department of Bioscience Technology, CYCU, Taiwan.
 Email: cdhsiao@cycu.edu.tw
