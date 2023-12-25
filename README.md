@@ -25,4 +25,6 @@ Four clustering methods deployed in single application for statistics
 
 # Installation on Windows operating systems (N/A on Linux)
 Unzip the source code mentioned in readmd file 
+![Untitled](https://github.com/Alizebrafish/3D_Clustering/assets/154585602/14a1bd03-c2a5-4a8c-aa30-40ed800acb19)
+
 
