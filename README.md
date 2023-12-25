@@ -34,7 +34,7 @@ Automatically virtual environment will be created for users having already Pytho
 
 If users do not have Python installed then ensure Internet Connection to download python by the application>>>>>>>>>
 
-![Capture](https://github.com/Alizebrafish/3D_Clustering/assets/154585602/f7f0dabe-77df-4ad4-b726-ad802a4856a2)
+![Untitled](https://github.com/Alizebrafish/3D_Clustering/assets/154585602/0b14e3ba-166c-4415-9f91-0d3238b2a9d3)
 
 
 
