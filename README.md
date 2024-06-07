@@ -3,7 +3,7 @@
 
 # Authorship 
 
-Ali Farhan                                                                                                                                                                                                                                                                                           PhD Fellow, CYCU, Taiwan.
+Dr. Ali Farhan                                                                                                                                                                                                                                                                                           PhD, CYCU, Taiwan.
 Email: smalifarhan@gmail.com  
 
 # Correspondence 
