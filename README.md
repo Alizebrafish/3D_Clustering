@@ -16,6 +16,10 @@ Email: cdhsiao@cycu.edu.tw
 
 ![Shot 0001](https://github.com/Alizebrafish/3D_Clustering/assets/154585602/1fb0d854-b1b6-4ee1-8f5b-801a46a5e7ec)
 
+# Note
+
+Users who do not have or are unable to handle NVIDIA RTX4070 with CUDA 12.5 configuration without TensorFlow version 2.18 must run "CPU version"
+
 # Features
 Comprehensive package for 3D clustering analysis of fish tracking/locomotion
 
