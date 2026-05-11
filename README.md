@@ -1,3 +1,4 @@
+<img width="2850" height="1215" alt="workflow_overview" src="https://github.com/user-attachments/assets/2f296baf-e0f2-4435-ae66-814b3ce860b9" />
 # 3D Clustering for Zebrafish Locomotion Analysis
 
 A Windows-based graphical application for unsupervised analysis of 3D zebrafish locomotion-tracking data.
