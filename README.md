@@ -1,3 +1,4 @@
+<img width="1167" height="739" alt="11" src="https://github.com/user-attachments/assets/69200a91-6076-45b2-8973-3bc827cc7f0b" />
 <img width="2850" height="1215" alt="workflow_overview" src="https://github.com/user-attachments/assets/9a6076bd-00c6-4e13-addf-7559e2f28e31" />
 <img width="2060" height="1349" alt="example_cluster_distribution_placeholder" src="https://github.com/user-attachments/assets/560995de-2772-4319-b455-e5c2bce3b841" />
 <img width="1164" height="726" alt="11" src="https://github.com/user-attachments/assets/e80c5290-082e-4929-b691-2c6274d57848" />
