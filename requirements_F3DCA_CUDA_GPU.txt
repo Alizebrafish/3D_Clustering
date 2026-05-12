@@ -1,0 +1,15 @@
+# F3DCA App - CUDA GPU requirements for native Windows TensorFlow GPU
+# IMPORTANT:
+# Use Python 3.10 only.
+# Requires NVIDIA driver + CUDA Toolkit 11.2 + cuDNN 8.1.
+# Native Windows TensorFlow GPU support is limited to TensorFlow 2.10.x.
+
+numpy==1.23.5
+pandas==1.5.3
+scipy==1.10.1
+scikit-learn==1.2.2
+matplotlib==3.7.3
+pillow==10.4.0
+openpyxl==3.1.5
+tensorflow==2.10.1
+keras==2.10.0
