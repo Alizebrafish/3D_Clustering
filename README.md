@@ -1,5 +1,5 @@
 Instruction: _Download F3DCA-New Zip file and run bat file_
-The source code for the original primary clustering workflow and the supplementary ARI/NMI external-validation analysis is available in a public GitHub repository. A representative XYZ-coordinate dataset from one experimental group is provided to demonstrate software installation, required input structure, and workflow execution. The full multi-group dataset used to generate the primary study figures and tables
+<The source code for the original primary clustering workflow and the supplementary ARI/NMI external-validation analysis is available in a public GitHub repository. A representative XYZ-coordinate dataset from one experimental group is provided to demonstrate software installation, required input structure, and workflow execution. The full multi-group dataset used to generate the primary study figures and tables/>
 <img width="1167" height="739" alt="11" src="https://github.com/user-attachments/assets/69200a91-6076-45b2-8973-3bc827cc7f0b" />
 <img width="2850" height="1215" alt="workflow_overview" src="https://github.com/user-attachments/assets/9a6076bd-00c6-4e13-addf-7559e2f28e31" />
 <img width="2060" height="1349" alt="example_cluster_distribution_placeholder" src="https://github.com/user-attachments/assets/560995de-2772-4319-b455-e5c2bce3b841" />
