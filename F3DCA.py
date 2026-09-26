@@ -1814,11 +1814,11 @@ class ClusteringApp:
         if arr.ndim != 2:
             arr = arr.reshape(len(arr), -1)
         if arr.shape[1] == 3:
-            return arr, ['Dim 1', 'Dim 2', 'Dim 3']
+            return arr, ['PC1', 'PC2', 'PC3']
         if arr.shape[1] < 3:
             out = np.zeros((arr.shape[0], 3), dtype=float)
             out[:, :arr.shape[1]] = arr
-            return out, ['Dim 1', 'Dim 2', 'Dim 3']
+            return out, ['PC1', 'PC2', 'PC3']
         pca3 = PCA(n_components=3, random_state=55)
         if train_idx is not None and len(train_idx):
             fit_idx = np.asarray(train_idx)
