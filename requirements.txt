@@ -1,0 +1,9 @@
+numpy
+pandas
+openpyxl
+scipy
+scikit-learn
+matplotlib
+pillow
+numba
+tensorflow==2.15.0
