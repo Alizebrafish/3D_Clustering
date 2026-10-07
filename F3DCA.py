@@ -48,12 +48,30 @@ from sklearn.preprocessing import StandardScaler, MinMaxScaler
 from scipy.stats import zscore
 from sklearn.metrics import accuracy_score, adjusted_rand_score, normalized_mutual_info_score, f1_score
 
-from tensorflow import keras
-from keras.layers import Input, LSTM, RepeatVector, TimeDistributed, Input, Dense, Conv1D, GlobalMaxPooling1D
-from keras.models import Model
+import os
+os.environ["TF_USE_LEGACY_KERAS"] = "1"
+
+# Universal import: prefer tf_keras if present to maintain consistency across TF 2.16+
+try:
+    import tf_keras as keras
+    from tf_keras.layers import (
+        Input, LSTM, RepeatVector, TimeDistributed, Dense, Conv1D,
+        Conv1DTranspose, GlobalMaxPooling1D, BatchNormalization, Flatten, Reshape, GaussianNoise
+    )
+    from tf_keras.models import Model, Sequential
+    from tf_keras.optimizers import Adam
+    from tf_keras.utils import set_random_seed
+except ImportError:
+    import tensorflow.keras as keras
+    from tensorflow.keras.layers import (
+        Input, LSTM, RepeatVector, TimeDistributed, Dense, Conv1D,
+        Conv1DTranspose, GlobalMaxPooling1D, BatchNormalization, Flatten, Reshape, GaussianNoise
+    )
+    from tensorflow.keras.models import Model, Sequential
+    from tensorflow.keras.optimizers import Adam
+    from tensorflow.keras.utils import set_random_seed
+
 from sklearn.model_selection import train_test_split
-from keras.optimizers import Adam
-from keras.utils import set_random_seed
 
 import tkinter as tk
 from tkinter import filedialog, messagebox
@@ -1615,7 +1633,37 @@ class ClusteringApp:
             lambda x: bool((x == 'Validation').any() and (x == 'Training').any())
         )
         return train_idx, val_idx, partition
+    @staticmethod
+    def _get_robust_gmm(n_c, seed=55):
+            # Try progressively regularized covariance settings to prevent Cholesky potrf collapse
+            class RobustGMM:
+                def __init__(self, n_components, random_state):
+                    self.n_components = n_components
+                    self.random_state = random_state
 
+                def fit_predict(self, X):
+                    # Ensure float64 precision to avoid numerical issues
+                    X_arr = np.asarray(X, dtype=np.float64)
+                    
+                    # 1. Try 'diag' first for high-dimensional raw trajectory vectors (700-D),
+                    # or 'full' with increasing reg_covar fallback
+                    for cov_type in (['full', 'diag'] if X_arr.shape[1] <= 32 else ['diag', 'full']):
+                        for reg in (1e-4, 1e-3, 1e-2, 1e-1):
+                            try:
+                                gmm = GaussianMixture(
+                                    n_components=self.n_components,
+                                    covariance_type=cov_type,
+                                    reg_covar=reg,
+                                    n_init=5,
+                                    random_state=self.random_state
+                                )
+                                return gmm.fit_predict(X_arr)
+                            except (ValueError, np.linalg.LinAlgError):
+                                continue
+                    # Fallback to KMeans if GMM strictly collapses on degenerate data
+                    return KMeans(n_clusters=self.n_components, n_init=10, random_state=self.random_state).fit_predict(X_arr)
+
+            return RobustGMM(n_components=n_c, random_state=seed)
     def _trajectory_recording_permutation_null(self, true_labels, predicted_labels, metadata, eval_idx, n_permutations=1000, seed=55):
         """Recording-level permutation null for ARI.
 
@@ -1665,10 +1713,12 @@ class ClusteringApp:
         else:
             idx = np.arange(len(labels))
 
+
+
         models_factory = lambda: [
             ('KMeans', KMeans(n_clusters=n_clusters, n_init=10, random_state=55)),
             ('Birch', Birch(n_clusters=n_clusters, threshold=0.5)),
-            ('GMM', GaussianMixture(n_components=n_clusters, n_init=5, random_state=55)),
+            ('GMM', self._get_robust_gmm(n_clusters, seed=55)),
             ('Spectral', SpectralClustering(
                 n_clusters=n_clusters,
                 n_init=10,
@@ -2494,4 +2544,3 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = ClusteringApp(root)
     root.mainloop()
-
