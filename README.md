@@ -77,9 +77,9 @@ pip install numpy pandas openpyxl scipy scikit-learn matplotlib pillow tf-keras 
 
 #### 4. Launch the application:
 ```bash
-python ClusteringApp.py
+python F3DCA.py
 ```
-*(Replace `ClusteringApp.py` with your script's filename if different).*
+*(Replace `F3DCA.py` with your script's filename if different).*
 
 ---
 
@@ -118,7 +118,7 @@ pip install numba
 
 #### 4. Run the program:
 ```bash
-python ClusteringApp.py
+python F3DCA.py
 ```
 
 ---
